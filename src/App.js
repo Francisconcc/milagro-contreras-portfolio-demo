@@ -1,56 +1,63 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+ import BagsEspec from '.././src/components/BagsEspec'
+ 
+ 
+ const bagsList =[
+  {
+    id:0,
+    name: "Tote Adhara",
+    rating : null,
+    category:"big-size",
+  },
+  {
+      id:1,
+      name:"Tote Boho",
+      rating: null,
+      category:"big-size",
+  },
+  {
+      id:2,
+      name:"Tote Stella",
+      rating:null,
+      category:"big-size",
+  },
+  {
+      id:3,
+      name:"Mini Meissa",
+      rating:null,
+      category:"mid-size",
+  },
+  {
+      id:4,
+      name:"Media Luna",
+      rating:null,
+      category:"mid-size",
+  },
+  {
+      id:5,
+      name:"Nova",
+      rating:null,
+      category:"mid-size",
+  },
+  {
+      id:6,
+      name:"Koala",
+      rating:null,
+      category:"small-size",
+  },
+  {
+      id:7,
+      name:"lunita",
+      rating:null,
+      category:"small-size",
+  },
+];
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div >
+     <h1> Milagro contreras bag's collection </h1>
+          { bagsList.map( bagss => <BagsEspec key={bagss.id} bagsss={bagss}/>) }
     </div>
   );
 }
